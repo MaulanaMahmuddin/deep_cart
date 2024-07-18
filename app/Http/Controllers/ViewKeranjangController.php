@@ -28,6 +28,6 @@ class ViewKeranjangController extends Controller
             )
             ->get();
 
-        return view('list-viewKeranjang', compact('viewKeranjang'));
+        return view('dashboard.list-viewKeranjang', compact('viewKeranjang'));
     }
 }
