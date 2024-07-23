@@ -16,10 +16,6 @@ use App\Http\Controllers\ViewKeranjangController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 ## Keranjang
 # List
 Route::get('/list-keranjang', [MasterKeranjangController::class, 'index']);
@@ -53,4 +49,6 @@ Route::get('/delete-barang/{id}', [MasterBarangController::class, 'destroy']);
 
 ## View Keranjang
 # List
-Route::get('/list-viewKeranjang', [ViewKeranjangController::class, 'index']);
+// Route::get('/list-viewKeranjang', [ViewKeranjangController::class, 'index']);
+Route::get('/list-viewKeranjang', [ViewKeranjangController::class, 'index'])->name('viewKeranjang.index');
+Route::get('/', [ViewKeranjangController::class, 'index']);
